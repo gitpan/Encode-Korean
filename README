@@ -74,7 +74,7 @@ DESCRIPTION
 
     MRR Encode::Korean::MRR implements an encoding system based on
         McCune-Reischauer Romanization, created in 1937 by George M. McCune
-        and Edwin O. Reischauer. It is the most widely used methods outside
+        and Edwin O. Reischauer. It is the most widely used method outside
         of Koreas.
 
         It is not ideal for encodings, since it uses non-ASCII characters.
@@ -104,7 +104,7 @@ SEEALSO
     See Lingua::KO::Romanize::Hangul, if you are looking for common
     romanization module of Korean.
 
-    See <http:en.wikipedia.org/wiki/Korean_romanization>,
+    See <http://en.wikipedia.org/wiki/Korean_romanization>,
     <http://www.eki.ee/wgrs/rom2_ko.htm> for more information about
     romanization of Korean.
 

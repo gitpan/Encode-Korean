@@ -1,10 +1,10 @@
 # Korean Transliterator Generator
 
-# $Id: TransliteratorGenerator.pm,v 1.5 2007-11-29 15:08:43+09 you Exp $
+# $Id: TransliteratorGenerator.pm,v 1.6 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::TransliteratorGenerator;
 
-our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.6 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 use strict;
@@ -616,7 +616,8 @@ sub get_correct_foot {
 
 1;
 __END__
-=utf8
+=encoding utf8
+
 =head1 NAME
 
 Encode::Korean - Perl extension for Encoding of Korean: Transliterator Generator 
@@ -668,24 +669,28 @@ eg. South Korean Standard
 
 =head2 TRANSLITERATION MODES
 
-Transliteration modes for ambiguous syllable boundary resolution
+Transliteration modes for ambiguous syllable boundary resolution. 
+
 
 =head3 1. Use CamelCase
 
-Makes syllables capitalized. Ignores $NAUGHT and $SEP.
+Makes syllables capitalized. Ignores $NAUGHT and $SEP. Not yet implemented at all.
 
  eg. 하나 -> HaNa, 한아 -> HanA
 
 =head3 2. Greedy Separator
 
-Insert $SEP between syllables. 
+Insert $SEP between syllables. Implemented. The object can produces (when encode)
+transliteration with greedy separator mode and recognize (decode) it.
 
  eg. 하나 -> ha.na, 한아 -> han'a, where $SEP = '.'; $NAUGHT = "'";
  eg. 하나 -> ha.na, 한아 -> han.a, where $SEP = '.'; $NAUGHT = undef;
 
 =head3 3. Smart Separator
 
- Insert $SEP when syllable boundaries are ambiguous in transliteration.
+Insert $SEP when syllable boundaries are ambiguous in transliteration.
+Partially implemented. The object can recognize (decode) it but does not
+produce it.
 
  If $NAUGHT is defined and is not null:
 
@@ -705,8 +710,6 @@ Insert $SEP between syllables.
    eg. 갂아 -> kakk.a,  각가 -> kak.ka, 가까 -> kakka
        각까 -> kak.kka, 갂가 -> kakk.ka
        갂까 -> kakk.kka
-
-
 
 =head1 SEE ALSO
 

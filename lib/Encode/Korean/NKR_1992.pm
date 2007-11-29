@@ -1,10 +1,10 @@
 # Encoding of Korean: North Korean Romanization 1992
 
-# $Id: NKR_1992.pm,v 1.4 2007/11/27 16:49:33 you Exp $
+# $Id: NKR_1992.pm,v 1.5 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::NKR_1992;
 
-our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -105,23 +105,23 @@ sub decode ($$;$) {
 
 1;
 __END__
-
+=encoding utf8
 =head1 NAME
 
 Encode::Korean::NKR_1992 - Perl extension for Encoding Korean: North Korean 
-Romanizaiton (National system of DPKR), released in 1992 by Chosun Gwahagwon.
+Romanizaiton 
 
 =head1 SYNOPSIS
 
-	use Encode::Korean::NKR_1992;
-
-	$string = decode 'nkr', decode $enc, $octets;
-	$octets = encode $enc, encode 'nkr', $string;
-
-	while($line = <>) {
-		print encode 'utf8', decode 'nkr', $line;
-	}
-
+  use Encode::Korean::NKR_1992;
+  
+  $string = decode 'nkr', decode $enc, $octets;
+  $octets = encode $enc, encode 'nkr', $string;
+  
+  while($line = <>) {
+    print encode 'utf8', decode 'nkr', $line;
+  }
+  
 =head1 DESCRIPTION
 
 L<Encode::Korean::NKR_1992> implements an encoding system based on North Korean 
@@ -129,8 +129,8 @@ Romanizaiton (National system of DPKR), released in 1992 by Chosun Gwahagwon.
 
 =head2 RULES
 
-$nkr->consonants(qw(k kk n t tt r m p pp s ss ng ts tss tsh kh th ph h));
-$nkr->vowels(
+ $nkr->consonants(qw(k kk n t tt r m p pp s ss ng ts tss tsh kh th ph h));
+ $nkr->vowels(
 	"a",
 	"ae",
 	"ya",
@@ -161,7 +161,7 @@ See
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo (at) gmail (dot) comE<gt>
+You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -170,6 +170,5 @@ Copyright (C) 2007 by You Hyun Jo
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
 at your option, any later version of Perl 5 you may have available.
-
 
 =cut

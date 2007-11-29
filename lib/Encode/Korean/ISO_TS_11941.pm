@@ -1,10 +1,10 @@
 # Encoding of Korean: ISO TS 11941 (formerly, ISO TR 11941)
 
-# $Id: ISO_TS_11941.pm,v 1.3 2007/11/27 16:19:04 you Exp $
+# $Id: ISO_TS_11941.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::ISO_TS_11941;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -110,7 +110,7 @@ The conversion is carried by a transliterator object of
 L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>.
 
 
-==head2 RULES
+=head2 RULES
 
 	Unicode name		Transliteration
 
@@ -185,7 +185,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo (at) gmail (dot) comE<gt>
+You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

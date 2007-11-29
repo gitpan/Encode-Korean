@@ -1,10 +1,10 @@
 # Encoding of Korean: South Korean Romanization 1959 
 
-# $Id: SKR_1959.pm,v 1.3 2007/11/27 16:19:04 you Exp $
+# $Id: SKR_1959.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::SKR_1959;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -83,7 +83,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::SKR_1959 - Perl extension for Encoding Korean: South Korean
+Encode::Korean::SKR_1959 - Perl extension for Encoding of Korean: South Korean
 Romanization 1959.
 
 =head1 SYNOPSIS
@@ -108,7 +108,8 @@ The conversion is carried by a transliterator object of
 L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>.
 
 
-==head2 RULES
+=head2 RULES
+
 RR of Korean is basically similar to McCune-Reischaur, but uses only low ascii
 characters. In case of ambiguity, orthographic syllable boundaries may be 
 indicated with a hyphen.

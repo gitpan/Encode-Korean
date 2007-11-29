@@ -1,10 +1,10 @@
 # Encoding of Korean: McCune-Reischauer Romanization
 
-# $Id: MRR.pm,v 1.2 2007/11/27 16:19:04 you Exp $
+# $Id: MRR.pm,v 1.3 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::MRR;
 
-our $VERSION = do { q$Revision: 1.2 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 use strict;
@@ -19,29 +19,6 @@ sub import {
 	require Encode;
 	Encode->export_to_level(1,@_);
 }
-#####	require Exporter;
-#####	
-#####	our @ISA = qw(Exporter);
-#####	
-#####	# Items to export into callers namespace by default. Note: do not export
-#####	# names by default without a very good reason. Use EXPORT_OK instead.
-#####	# Do not simply export all your public functions/methods/constants.
-#####	
-#####	# This allows declaration	use Encode::Korean ':all';
-#####	# If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
-#####	# will save memory.
-#####	our %EXPORT_TAGS = ( 'all' => [ qw(
-#####		
-#####	) ] );
-#####	
-#####	our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
-#####	
-#####	our @EXPORT = qw(
-#####		
-#####	);
-#####	
-
-
 
 use Encode::Korean::TransliteratorGenerator;
 
@@ -133,14 +110,14 @@ Encode::Korean::MRR - Perl extension for Encoding Korean: McCune-Reishauer Roman
 
 =head1 SYNOPSIS
 
-	use Encode::Korean::MRR;
+   use Encode::Korean::MRR;
 
-	$string = decode 'mrr', $octets;
-	$octets = encode 'mrr', $string;
+   $string = decode 'mrr', $octets;
+   $octets = encode 'mrr', $string;
 
-	while($line = <>) {
-		print decode 'mrr', $line;
-	}
+   while($line = <>) {
+     print decode 'mrr', $line;
+   }
 
 =head1 DESCRIPTION
 
@@ -169,3 +146,4 @@ at your option, any later version of Perl 5 you may have available.
 
 
 =cut
+# vim: set ts=3 sts=3 sw=3 et

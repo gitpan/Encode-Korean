@@ -1,6 +1,6 @@
 # Encodings of Korean
 
-# $Id: Korean.pm,v 1.5 2007/11/29 04:30:01 you Exp $
+# $Id: Korean.pm,v 1.7 2007-11-29 18:20:45+09 you Exp $
 
 package Encode::Korean;
 
@@ -8,7 +8,7 @@ use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.7 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 sub import {
 	if ( defined $_[1] and $_[1] eq ':modes') {
@@ -158,7 +158,7 @@ released in 1984.
 
 L<Encode::Korean::MRR> implements an encoding system based on McCune-Reischauer
 Romanization, created in 1937 by George M. McCune and Edwin O. Reischauer. It
-is the most widely used methods outside of Koreas.
+is the most widely used method outside of Koreas.
 
 It is not ideal for encodings, since it uses non-ASCII characters.
 
@@ -187,16 +187,16 @@ of modes is taken from L<Encode::Arabic>. Refer to it for instruction.
 =head1 SEEALSO
 
 See 
- Encode::KR,
- Lingua::KO::MacKorean, 
+ L<Encode::KR>,
+ L<Lingua::KO::MacKorean>, 
  if you are looking for common (two byte) encodings used in South Korea.
 
 See 
- Lingua::KO::Romanize::Hangul,
+ L<Lingua::KO::Romanize::Hangul>,
  if you are looking for common romanization module of Korean.
 
 See
- L<http:en.wikipedia.org/wiki/Korean_romanization>, 
+ L<http://en.wikipedia.org/wiki/Korean_romanization>, 
  L<http://www.eki.ee/wgrs/rom2_ko.htm>
  for more information about romanization of Korean.
  

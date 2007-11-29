@@ -1,10 +1,10 @@
 # Encoding of Korean: Yale Romanization System for Korean Language
 
-# $Id: Yale.pm,v 1.3 2007/11/27 16:19:04 you Exp $
+# $Id: Yale.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::Yale;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -83,7 +83,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::Yale - Perl extension for Encoding Korean: Yale Romanization
+Encode::Korean::Yale - Perl extension for Encoding Korean: Yale Romanization 
 System for Koran Language
 
 =head1 SYNOPSIS
@@ -94,22 +94,22 @@ System for Koran Language
   $octets = encode 'yale', $string;
 
   while($line = <>) {
-		print encode 'utf8', decode 'yale', $line;
+    print encode 'utf8', decode 'yale', $line;
   }
 
 =head1 DESCRIPTION
 
-L<Encode::Korean::Yale|Encode::Korean::Yale> implements an encoding system
-of Korean based on the transliteration method of Yale Romanization for
-Korean Language, developed by S. Martin and his colleagues at Yale University.
-It is used mainly and only in linguistics.
+L<Encode::Korean::Yale|Encode::Korean::Yale> implements an encoding system 
+based on the transliteration method of Yale Romanization for 
+Korean Language, developed by S. Martin and his colleagues at Yale University. 
+It is used mainly and only in academic litterature.
 
 This module use Encode implementation base class L<Encode::Encoding|Encode::Encoding>.
 The conversion is carried by a transliterator object of 
 L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>.
 
 
-==head2 RULES
+=head2 RULES
 
 	Unicode name		Transliteration
 
@@ -159,28 +159,28 @@ L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerato
 =head1 SEE ALSO
 
 Visit 
-L<http://en.wikipedia.org/wiki/Yale_Romanization>, 
-for more information about Yale Romanization.
+ L<http://en.wikipedia.org/wiki/Yale_Romanization>, 
+ for more information about Yale Romanization.
 
 Visit
-L<http://www.alanwood.net/unicode/hangul_jamo.html>,
-if you want a list of Hangul Jamo in Unicode.
+ L<http://www.alanwood.net/unicode/hangul_jamo.html>,
+ if you want a list of Hangul Jamo in Unicode.
 
 See
-L<Encode|Encode>, 
-L<Encode::Encoding|Encode::Encoding>, 
-L<Encode::Korean|Encode::Korean>, 
-L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>, 
-if you want to know more about relevant modules.
+ L<Encode|Encode>, 
+ L<Encode::Encoding|Encode::Encoding>, 
+ L<Encode::Korean|Encode::Korean>, 
+ L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>, 
+ if you want to know more about relevant modules.
 
 See 
-L<Encode::KR|Encode::KR>, 
-L<Lingua::KO::MacKorean|Lingua::KO::MacKorean>, 
-if you need common encodings.
+ L<Encode::KR|Encode::KR>, 
+ L<Lingua::KO::MacKorean|Lingua::KO::MacKorean>, 
+ if you need common encodings.
 
 See
-L<Lingua::KO::Romanize::Hangul|Lingua::KO::Romanize::Hangul>, 
-if you need a common romanization (transcription method used in public).
+ L<Lingua::KO::Romanize::Hangul|Lingua::KO::Romanize::Hangul>, 
+ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 

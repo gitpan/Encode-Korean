@@ -1,11 +1,11 @@
 # Encoding of Korean: South Korean Romanization 2000 
 #                     (aka. Revised Romanization of Korean)
 
-# $Id: SKR_2000.pm,v 1.2 2007/11/27 13:47:25 you Exp $
+# $Id: SKR_2000.pm,v 1.3 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::SKR_2000;
 
-our $VERSION = do { q$Revision: 1.2 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -95,7 +95,7 @@ Romanization 2000.
   $octets = encode 'skr-2000', $string;
 
   while($line = <>) {
-		print encode 'utf8', decode 'skr-2000', $line;
+    print encode 'utf8', decode 'skr-2000', $line;
   }
 
 =head1 DESCRIPTION
@@ -110,7 +110,7 @@ The conversion is carried by a transliterator object of
 L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>.
 
 
-==head2 RULES
+=head2 RULES
 RR of Korean is basically similar to McCune-Reischaur, but uses only low ascii
 characters. In case of ambiguity, orthographic syllable boundaries may be 
 indicated with a hyphen.
@@ -190,7 +190,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo (at) gmail (dot) com<gt>
+You Hyun Jo, E<lt>youhyunjo at gmail dot com<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -1,10 +1,10 @@
 # Encoding of Korean: SKATS (Standard Korean Alphabet Transliteration System)
 
-# $Id: SKATS.pm,v 1.3 2007/11/27 16:19:04 you Exp $
+# $Id: SKATS.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
 
 package Encode::Korean::SKATS;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 
 use 5.008008;
@@ -113,7 +113,7 @@ Encode::Korean::SKATS - Perl extension for Encoding Korean: SKATS
   $octets = encode 'skats', $string;
 
   while($line = <>) {
-		print encode 'utf8', decode 'skats', $line;
+    print encode 'utf8', decode 'skats', $line;
   }
 
 =head1 DESCRIPTION
@@ -126,7 +126,7 @@ The conversion is carried by a transliterator object of
 L<Encode::Korean::TransliteratorGenerator|Encode::Korean::TransliteratorGenerator>.
 
 
-==head2 RULES
+=head2 RULES
 
 	Unicode name		Transliteration
 
