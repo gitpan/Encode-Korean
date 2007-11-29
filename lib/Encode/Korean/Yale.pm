@@ -1,10 +1,10 @@
 # Encoding of Korean: Yale Romanization System for Korean Language
 
-# $Id: Yale.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
+# $Id: Yale.pm,v 1.6 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::Yale;
 
-our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.6 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -83,7 +83,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::Yale - Perl extension for Encoding Korean: Yale Romanization 
+Encode::Korean::Yale - Perl extension for Encoding of Korean: Yale Romanization 
 System for Koran Language
 
 =head1 SYNOPSIS
@@ -184,7 +184,7 @@ See
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo (at) gmail (dot) comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

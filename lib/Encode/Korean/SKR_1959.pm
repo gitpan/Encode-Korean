@@ -1,10 +1,10 @@
 # Encoding of Korean: South Korean Romanization 1959 
 
-# $Id: SKR_1959.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
+# $Id: SKR_1959.pm,v 1.5 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::SKR_1959;
 
-our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -187,7 +187,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo (at) gmail (dot) comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

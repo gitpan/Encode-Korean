@@ -1,10 +1,10 @@
 # Encoding of Korean: Hangeul Society Romanization 1984
 
-# $Id: HSR.pm,v 1.5 2007-11-29 18:42:06+09 you Exp $
+# $Id: HSR.pm,v 1.7 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::HSR;
 
-our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.7 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -24,30 +24,30 @@ sub import {
 
 # == RULES ==
 use Encode::Korean::TransliteratorGenerator;
-my $coder = Encode::Korean::TransliteratorGenerator->new();
+my $hsr = Encode::Korean::TransliteratorGenerator->new();
 
-$coder->consonants(qw(g gg n d dd l m b bb s ss ng j jj ch k t p h));
-$coder->vowels(qw(a ae ya yae eo e yeo ye o wa wae oe yo u weo we wi yu eu eui i));
-$coder->el('l');
-$coder->ell('ll');
-$coder->naught('.');
-$coder->sep('.');
-$coder->make();
+$hsr->consonants(qw(g gg n d dd l m b bb s ss ng j jj ch k t p h));
+$hsr->vowels(qw(a ae ya yae eo e yeo ye o wa wae oe yo u weo we wi yu eu eui i));
+$hsr->el('l');
+$hsr->ell('ll');
+$hsr->naught('.');
+$hsr->sep('.');
+$hsr->make();
 
 
 # == MODES ==
-$coder->enmode('greedy');
-$coder->demode('greedy');
+$hsr->enmode('greedy');
+$hsr->demode('greedy');
 sub enmode {
 	my $class = shift;
 	my($mode) = @_;
-	$coder->enmode($mode);
+	$hsr->enmode($mode);
 }
 
 sub demode {
 	my $class = shift;
 	my($mode) = @_;
-	$coder->demode($mode);
+	$hsr->demode($mode);
 }
 
 
@@ -58,7 +58,7 @@ sub demode {
 #   into transliterated (romanized) string
 sub encode ($$;$) {
     my ($obj, $str, $chk) = @_;
-	 my $tr = $coder->encode($str, $chk);
+	 my $tr = $hsr->encode($str, $chk);
     $_[1] = '' if $chk;
     return $tr;
 }
@@ -69,7 +69,7 @@ sub encode ($$;$) {
 # * Decodes transliteration into unicode hangul syllables (Perl internal string)
 sub decode ($$;$) {
     my ($obj, $str, $chk) = @_;
-	 my $han = $coder->decode($str, $chk);
+	 my $han = $hsr->decode($str, $chk);
     $_[1] = '' if $chk;
     return $han;
 }
@@ -83,7 +83,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::HSR - Perl extension for Encoding Korean: Hangeul Society
+Encode::Korean::HSR - Perl extension for Encoding of Korean: Hangeul Society
 Romanization 1984
 
 =head1 SYNOPSIS
@@ -183,7 +183,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

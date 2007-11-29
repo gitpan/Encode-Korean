@@ -1,11 +1,11 @@
 # Encoding of Korean: South Korean Romanization 2000 
 #                     (aka. Revised Romanization of Korean)
 
-# $Id: SKR_2000.pm,v 1.3 2007-11-29 18:42:06+09 you Exp $
+# $Id: SKR_2000.pm,v 1.5 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::SKR_2000;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -84,7 +84,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::SKR_2000 - Perl extension for Encoding Korean: South Korean
+Encode::Korean::SKR_2000 - Perl extension for Encoding of Korean: South Korean
 Romanization 2000.
 
 =head1 SYNOPSIS
@@ -190,7 +190,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot com<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

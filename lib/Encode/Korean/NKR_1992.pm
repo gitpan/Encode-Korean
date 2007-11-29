@@ -1,10 +1,10 @@
 # Encoding of Korean: North Korean Romanization 1992
 
-# $Id: NKR_1992.pm,v 1.5 2007-11-29 18:42:06+09 you Exp $
+# $Id: NKR_1992.pm,v 1.7 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::NKR_1992;
 
-our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.7 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -108,7 +108,7 @@ __END__
 =encoding utf8
 =head1 NAME
 
-Encode::Korean::NKR_1992 - Perl extension for Encoding Korean: North Korean 
+Encode::Korean::NKR_1992 - Perl extension for Encoding of Korean: North Korean 
 Romanizaiton 
 
 =head1 SYNOPSIS
@@ -161,7 +161,7 @@ See
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

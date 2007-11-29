@@ -1,14 +1,15 @@
 # Encodings of Korean
 
-# $Id: Korean.pm,v 1.7 2007-11-29 18:20:45+09 you Exp $
+# $Id: Korean.pm,v 1.9 2007/11/29 14:29:53 you Exp $
 
 package Encode::Korean;
 
 use 5.008008;
+
 use strict;
 use warnings;
 
-our $VERSION = do { q$Revision: 1.7 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.9 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 sub import {
 	if ( defined $_[1] and $_[1] eq ':modes') {
@@ -18,6 +19,7 @@ sub import {
 		__PACKAGE__->export_to_level(1, $_[0], 'enmode', 'demode');
 		splice @_, 1, 1;
 	}
+
 	require Encode;
 	Encode->export_to_level(1, @_);
 }
@@ -206,7 +208,7 @@ See
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

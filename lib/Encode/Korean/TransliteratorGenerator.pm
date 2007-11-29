@@ -1,10 +1,10 @@
 # Korean Transliterator Generator
 
-# $Id: TransliteratorGenerator.pm,v 1.6 2007-11-29 18:42:06+09 you Exp $
+# $Id: TransliteratorGenerator.pm,v 1.7 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::TransliteratorGenerator;
 
-our $VERSION = do { q$Revision: 1.6 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.7 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 use strict;
@@ -716,7 +716,7 @@ produce it.
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

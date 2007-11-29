@@ -1,10 +1,10 @@
 # Encoding of Korean: ISO TS 11941 (formerly, ISO TR 11941)
 
-# $Id: ISO_TS_11941.pm,v 1.4 2007-11-29 18:42:06+09 you Exp $
+# $Id: ISO_TS_11941.pm,v 1.6 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::ISO_TS_11941;
 
-our $VERSION = do { q$Revision: 1.4 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.6 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
 
@@ -24,30 +24,30 @@ sub import {
 
 # == RULES ==
 use Encode::Korean::TransliteratorGenerator;
-my $coder = Encode::Korean::TransliteratorGenerator->new();
+my $iso = Encode::Korean::TransliteratorGenerator->new();
 
-$coder->consonants(qw(k kk n t tt r m p pp s ss ng c cc ch kh th ph h));
-$coder->vowels(qw(a ae ya yae eo e yeo ye o wa wae oe yo u weo we wi yu eu yi i));
-$coder->el('l');
-$coder->ell('ll');
-$coder->naught("'");
-$coder->sep("'");
-$coder->make();
+$iso->consonants(qw(k kk n t tt r m p pp s ss ng c cc ch kh th ph h));
+$iso->vowels(qw(a ae ya yae eo e yeo ye o wa wae oe yo u weo we wi yu eu yi i));
+$iso->el('l');
+$iso->ell('ll');
+$iso->naught("'");
+$iso->sep("'");
+$iso->make();
 
 
 # == MODES ==
-$coder->enmode('greedy');
-$coder->demode('greedy');
+$iso->enmode('greedy');
+$iso->demode('greedy');
 sub enmode {
 	my $class = shift;
 	my($mode) = @_;
-	$coder->enmode($mode);
+	$iso->enmode($mode);
 }
 
 sub demode {
 	my $class = shift;
 	my($mode) = @_;
-	$coder->demode($mode);
+	$iso->demode($mode);
 }
 
 
@@ -58,7 +58,7 @@ sub demode {
 #   into transliterated (romanized) string
 sub encode ($$;$) {
     my ($obj, $str, $chk) = @_;
-	 my $tr = $coder->encode($str, $chk);
+	 my $tr = $iso->encode($str, $chk);
     $_[1] = '' if $chk;
     return $tr;
 }
@@ -69,7 +69,7 @@ sub encode ($$;$) {
 # * Decodes transliteration into unicode hangul syllables (Perl internal string)
 sub decode ($$;$) {
     my ($obj, $str, $chk) = @_;
-	 my $han = $coder->decode($str, $chk);
+	 my $han = $iso->decode($str, $chk);
     $_[1] = '' if $chk;
     return $han;
 }
@@ -83,7 +83,7 @@ sub decode ($$;$) {
 __END__
 =head1 NAME
 
-Encode::Korean::ISO_TS_11941 - Perl extension for Encoding Korean: ISO TS 11941
+Encode::Korean::ISO_TS_11941 - Perl extension for Encoding of Korean: ISO TS 11941
 (formely, ISO TR 11941)
 
 =head1 SYNOPSIS
@@ -185,7 +185,7 @@ if you need a common romanization (transcription method used in public).
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

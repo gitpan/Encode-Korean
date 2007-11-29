@@ -1,12 +1,13 @@
 # Encoding of Korean: McCune-Reischauer Romanization
 
-# $Id: MRR.pm,v 1.3 2007-11-29 18:42:06+09 you Exp $
+# $Id: MRR.pm,v 1.5 2007/11/29 14:25:31 you Exp $
 
 package Encode::Korean::MRR;
 
-our $VERSION = do { q$Revision: 1.3 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
+our $VERSION = do { q$Revision: 1.5 $ =~ /\d+\.(\d+)/; sprintf "%.2f", $1 / 100  };
 
 use 5.008008;
+
 use strict;
 use warnings;
 
@@ -106,7 +107,7 @@ __END__
 
 =head1 NAME
 
-Encode::Korean::MRR - Perl extension for Encoding Korean: McCune-Reishauer Romanization 
+Encode::Korean::MRR - Perl extension for Encoding of Korean: McCune-Reishauer Romanization 
 
 =head1 SYNOPSIS
 
@@ -134,7 +135,7 @@ See
 
 =head1 AUTHOR
 
-You Hyun Jo, E<lt>youhyunjo at gmail dot comE<gt>
+You Hyun Jo, E<lt>you at cpan dot orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -146,4 +147,4 @@ at your option, any later version of Perl 5 you may have available.
 
 
 =cut
-# vim: set ts=3 sts=3 sw=3 et
+# vim: set ts=4 sts=4 sw=4 et
